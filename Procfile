@@ -1,1 +1,1 @@
-web: gunicorn --access-logfile - --error-logfile - app:app
+web: gunicorn  app:app --preload

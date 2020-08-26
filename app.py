@@ -31,7 +31,8 @@ from mrcnn.model import MaskRCNN
 import tensorflow as tf
 import keras.backend as K
 
-@app.route('/healthcheck', methods=['GET'])
+
+@app.route('/', methods=['GET'])
 def healthcheck():
     return ("OK", 200)
 
