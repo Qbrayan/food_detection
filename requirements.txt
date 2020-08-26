@@ -45,6 +45,8 @@ requests
 retrying==1.3.3
 rope==0.17.0
 rsa==4.5
+libspatialindex
+Rtree==0.9.4
 s3transfer==0.3.3
 scikit-image==0.16.2
 scikit-learn 
