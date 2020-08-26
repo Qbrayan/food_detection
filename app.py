@@ -104,7 +104,7 @@ model = MaskRCNN(mode="inference",
 
 #model.load_weights(MODEL_DIR, by_name=True) 
 
-path ="https://github.com/Qbrayan/food_detection/blob/master/trained-models/mask_rcnn_foodmodel_0030.h5?raw=true"
+path ="trained-models/mask_rcnn_foodmodel_0030.h5"
 
 model.load_weights(path,by_name=True)
 
