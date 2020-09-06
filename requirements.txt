@@ -55,9 +55,7 @@ six==1.15.0
 snowballstemmer==2.0.0
 sortedcontainers==2.2.2
 soupsieve==2.0.1
-tensorboard==2.1.0
-tensorflow==2.1.0
-tensorflow-estimator==2.1.0
+tensorflow==1.15.2
 termcolor==1.1.0
 terminado==0.8.3
 testpath==0.4.4

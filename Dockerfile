@@ -3,7 +3,7 @@ COPY . /app
 WORKDIR /app
 
 COPY requirements.txt ./requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt 
 # making directory of app
 WORKDIR /app
 # copying all files over

@@ -9,6 +9,7 @@ import skimage
 from flask import Flask, request, jsonify, make_response, render_template, url_for
 from settings import *
 import pathlib
+import requests
 
 #PACKAGE_ROOT = pathlib.Path(__file__).resolve()
 #ROOT_DIR = os.path.abspath("")
@@ -94,8 +95,15 @@ sess = tf.Session(config=tf_config)
 graph = tf.get_default_graph()
 K.set_session(sess)
 
+os.makedirs(os.path.join(MODELS_ROOT,'trained-models'),exist_ok=True)
 
 model_path ="https://github.com/Qbrayan/food_detection/releases/download/0.1.0/mask_rcnn_foodmodel_0030.h5"
+
+q = requests.get(model_path)
+
+with open(MODEL_DIR, 'wb') as f:
+    f.write(q.content)
+
 
 # Recreate the model in inference mode
 model = MaskRCNN(mode="inference", 
@@ -104,7 +112,7 @@ model = MaskRCNN(mode="inference",
 
 
 
-model.load_weights(model_path, by_name=True) 
+model.load_weights(MODEL_DIR, by_name=True) 
 
 
 
